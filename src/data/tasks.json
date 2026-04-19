@@ -1,0 +1,115 @@
+[
+    {
+        "id": 1,
+        "title": "Design landing page mockup",
+        "description": "Create wireframes and visual design for the new product landing page",
+        "status": "in_progress",
+        "priority": "high",
+        "assignee": "Alice Johnson",
+        "due_date": "2026-04-25",
+        "tags": [
+            "design",
+            "frontend"
+        ],
+        "created_at": "2026-04-10T09:00:00Z"
+    },
+    {
+        "id": 2,
+        "title": "Set up CI/CD pipeline",
+        "description": "Configure GitHub Actions for automated testing and deployment",
+        "status": "todo",
+        "priority": "high",
+        "assignee": "Bob Smith",
+        "due_date": "2026-04-28",
+        "tags": [
+            "devops",
+            "automation"
+        ],
+        "created_at": "2026-04-11T10:30:00Z"
+    },
+    {
+        "id": 3,
+        "title": "Write unit tests for auth module",
+        "description": "Achieve 90% code coverage for authentication and authorization logic",
+        "status": "todo",
+        "priority": "medium",
+        "assignee": "Carol White",
+        "due_date": "2026-05-02",
+        "tags": [
+            "testing",
+            "backend"
+        ],
+        "created_at": "2026-04-12T08:15:00Z"
+    },
+    {
+        "id": 4,
+        "title": "Fix payment gateway timeout bug",
+        "description": "Investigate and resolve intermittent timeouts in the Stripe integration",
+        "status": "in_progress",
+        "priority": "critical",
+        "assignee": "David Lee",
+        "due_date": "2026-04-21",
+        "tags": [
+            "bug",
+            "payments",
+            "backend"
+        ],
+        "created_at": "2026-04-13T14:00:00Z"
+    },
+    {
+        "id": 5,
+        "title": "Update user onboarding flow",
+        "description": "Revamp the onboarding steps based on UX research findings",
+        "status": "review",
+        "priority": "medium",
+        "assignee": "Eva Martinez",
+        "due_date": "2026-04-30",
+        "tags": [
+            "ux",
+            "frontend"
+        ],
+        "created_at": "2026-04-08T11:00:00Z"
+    },
+    {
+        "id": 6,
+        "title": "Migrate database to PostgreSQL 16",
+        "description": "Upgrade from PostgreSQL 14, run migration scripts, and validate data integrity",
+        "status": "todo",
+        "priority": "low",
+        "assignee": "Frank Chen",
+        "due_date": "2026-05-15",
+        "tags": [
+            "database",
+            "infrastructure"
+        ],
+        "created_at": "2026-04-14T09:45:00Z"
+    },
+    {
+        "id": 7,
+        "title": "Conduct Q2 performance review",
+        "description": "Compile team metrics and prepare performance reports for Q2",
+        "status": "done",
+        "priority": "medium",
+        "assignee": "Grace Kim",
+        "due_date": "2026-04-15",
+        "tags": [
+            "management",
+            "reporting"
+        ],
+        "created_at": "2026-04-01T08:00:00Z"
+    },
+    {
+        "id": 8,
+        "title": "Integrate analytics dashboard",
+        "description": "Embed Mixpanel charts into the admin portal for real-time insights",
+        "status": "todo",
+        "priority": "low",
+        "assignee": "Henry Park",
+        "due_date": "2026-05-10",
+        "tags": [
+            "analytics",
+            "frontend"
+        ],
+        "created_at": "2026-04-15T13:00:00Z"
+    }
+]
