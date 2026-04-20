@@ -1,6 +1,7 @@
 import { Link } from '@heroui/react';
 import React from 'react';
 import ThemeToggle from './ThemeToggle';
+// import AddTask from './AddTask';
 
 const Navbar = () => {
     return (
@@ -17,6 +18,9 @@ const Navbar = () => {
                 <div>
                     <ThemeToggle></ThemeToggle>
                 </div>
+                {/* <div>
+                    <AddTask></AddTask>
+                </div> */}
             </header>
         </nav>
 
