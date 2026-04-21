@@ -30,7 +30,7 @@ const AddTask = ({ createATask }) => {
                     <Label>Name</Label>
                     <Input placeholder="Enter your Task Title" />
                   </TextField>
-                  <TextField className="w-full" name="descritption" type="text">
+                  <TextField className="w-full" name="description" type="text">
                     <Label>Task Description</Label>
                     <Input placeholder="Enter your Task Description" />
                   </TextField>
@@ -91,7 +91,7 @@ const AddTask = ({ createATask }) => {
                     </Select.Popover>
                   </Select>
                   <TextField className="w-full" name="assignedTo">
-                    <Label>Assigned Tp</Label>
+                    <Label>Assigned To</Label>
                     <Input placeholder="Task Assigned To" />
                   </TextField>
                   <Modal.Footer>
