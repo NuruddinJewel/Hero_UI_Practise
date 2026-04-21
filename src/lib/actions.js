@@ -107,4 +107,16 @@ export const newTaskAction = async (formData) => {
     revalidatePath('/tasks');
     redirect('/tasks');
   }
+
+  //Error Handling
+  if (!newTask.title) {
+    return { success: false, error: 'Title is required' }
+  }
+  if (newTask.title.length < 5) {
+    return { success: false, error: "Title must be at least 5 characters or longer " }
+  }
+
 }
+
+
+
