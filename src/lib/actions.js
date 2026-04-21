@@ -1,8 +1,8 @@
-//Created Server Actions(API private)
-export const createATask = async (formdata) => {
-    'use server'
-    const name = formdata.get('name');
-    console.log('Adding a task with name :', name)
+//Created Server Actions(API private) (Inside the function)
+export const createATask = async (formData) => {
+  'use server'
+  const name = formData.get('name');
+  console.log('Adding a task with name :', formData)
 }
 
 /* 
