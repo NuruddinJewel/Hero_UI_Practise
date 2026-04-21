@@ -1,29 +1,58 @@
-import { revalidatePath } from "next/cache";
-import { postTask } from "./tasks";
+// import { revalidatePath } from "next/cache";
+// import { postTask } from "./tasks";
+// import { redirect } from "next/navigation";
 
 //Created Server Actions(API private) (Inside the function)
-export const createATask = async (formData) => {
-  'use server'
-  // const name = formData.get('name');
-  // const title = formData.get('title');
-  // const description = formData.get('description');
-  // const priority = formData.get('priority');
-  // const status = formData.get("status");
-  // const assignedTo = formData.get('assignedTo');
-  // // console.log('Adding a task with name :', formData)
-  // const newTask = { title, description, priority, status, assignedTo };
+// export const createATask = async (formData) => {
+//   'use server'
+//   // const name = formData.get('name');
+//   // const title = formData.get('title');
+//   // const description = formData.get('description');
+//   // const priority = formData.get('priority');
+//   // const status = formData.get("status");
+//   // const assignedTo = formData.get('assignedTo');
+//   // // console.log('Adding a task with name :', formData)
+//   // const newTask = { title, description, priority, status, assignedTo };
 
-  // Converting form data to object
-  const newTask = Object.fromEntries(formData.entries());
-  console.log('Adding a task with name: ', newTask);
+//   // Converting form data to object
+//   const newTask = Object.fromEntries(formData.entries());
+//   console.log('Adding a task with name: ', newTask);
 
-  // await postTask(newTask);
-  const res = await postTask(newTask);
-  if (res.ok) {
-    revalidatePath('/tasks')
-  }
-  return res;
-}
+//   // await postTask(newTask);
+//   const res = await postTask(newTask);
+//   if (res.ok) {
+//     revalidatePath('/tasks')
+//   }
+//   return res;
+// }
+
+// export const newTaskAction = async (formData) => {
+//   'use server'
+//   const newTask = Object.fromEntries(formData.entries());
+
+//   console.log('Adding a task with name: ', newTask);
+
+//   const res = await postTask(newTask);
+//   if (res.ok) {
+//     revalidatePath('/tasks');
+//     redirect('/tasks');
+//   }
+// }
+// export const newTaskAction = async (formData) => {
+//   'use server'
+//   const newTask = Object.fromEntries(formData.entries());
+//   console.log('Adding a task:', newTask);
+
+//   const res = await postTask(newTask);
+
+//   console.log('res.ok:', res.ok);
+
+//   if (res.ok) {
+//     revalidatePath('/tasks');
+//     redirect('/tasks');
+//   }
+// }
+
 
 
 
@@ -49,3 +78,33 @@ export async function createPost(formData: FormData) {
 
 
 */
+
+'use server' // ← Add this at the very top of the file
+
+import { revalidatePath } from "next/cache";
+import { postTask } from "./tasks";
+import { redirect } from "next/navigation";
+
+export const createATask = async (formData) => {
+  // No need for inline 'use server' anymore
+  const newTask = Object.fromEntries(formData.entries());
+  console.log('Adding a task with name: ', newTask);
+
+  const res = await postTask(newTask);
+  if (res.ok) {
+    revalidatePath('/tasks');
+  }
+  return res;
+}
+
+export const newTaskAction = async (formData) => {
+  // No need for inline 'use server' anymore
+  const newTask = Object.fromEntries(formData.entries());
+  console.log('Adding a task with name: ', newTask);
+
+  const res = await postTask(newTask);
+  if (res.ok) {
+    revalidatePath('/tasks');
+    redirect('/tasks');
+  }
+}
